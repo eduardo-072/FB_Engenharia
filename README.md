@@ -8,22 +8,24 @@ O objetivo do site é transmitir credibilidade, profissionalismo e facilitar o c
 
 # Principais funcionalidades
 * Página inicial com apresentação profissional
-Sessão sobre o engenheiro e experiência profissional
-Área de serviços oferecidos
-Informações sobre laudos técnicos e vistorias
-Formulário de contato integrado ao WhatsApp
-Layout responsivo para desktop e dispositivos móveis
-Design moderno e intuitivo
-Navegação simples e objetiva
-Serviços apresentados no site
-Vistoria cautelar
-Laudos técnicos de terrenos
-Inspeções prediais
-Avaliação de patologias estruturais
-Relatórios fotográficos
-Perícias técnicas
-Consultoria em engenharia
-Tecnologias utilizadas
+* Sessão sobre o engenheiro e experiência profissional
+* Área de serviços oferecidos
+* Informações sobre laudos técnicos e vistorias
+* Formulário de contato integrado ao WhatsApp
+* Design moderno e intuitivo
+* Navegação simples e objetiva
+
+# Serviços apresentados no site
+* Regularização  de imóveis urbanos
+* Desmembramentos e unificação de lotes
+* Emissão de alvará de construção
+* Laudos  técnicos de avaliação e inspeção
+* Identificação de patologias construtivas 
+* Relatórios técnicos com ART
+* Legalização de obras já executadas
+* Adequação às normas municipais e códigos de obras
+
+# Tecnologias utilizadas
 HTML5
 CSS3
 JavaScript
@@ -32,16 +34,8 @@ Objetivo do projeto
 
 Criar uma presença digital profissional para ampliar a visibilidade do engenheiro, facilitar a captação de clientes e apresentar os serviços técnicos de forma clara, organizada e confiável.
 
-Público-alvo
-Proprietários de terrenos
-Construtoras
-Imobiliárias
-Empresas
-Clientes particulares
-Escritórios de arquitetura e engenharia
-Diferenciais do site
-Interface profissional
-Alta performance
-Fácil manutenção
-Compatível com dispositivos móveis
-Estrutura preparada para futuras expansões
+# Público-alvo
+* Proprietários de terrenos
+* Construtoras
+* Imobiliárias
+* Empresas
