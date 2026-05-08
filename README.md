@@ -6,8 +6,8 @@ Este projeto consiste no desenvolvimento de um site institucional moderno, respo
 
 O objetivo do site é transmitir credibilidade, profissionalismo e facilitar o contato com clientes que buscam serviços de avaliação técnica, perícias e documentação especializada na área da engenharia.
 
-Principais funcionalidades
-Página inicial com apresentação profissional
+# Principais funcionalidades
+* Página inicial com apresentação profissional
 Sessão sobre o engenheiro e experiência profissional
 Área de serviços oferecidos
 Informações sobre laudos técnicos e vistorias
