@@ -1,15 +1,16 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial; }
 :root {
     --azul-petroleo: #0c5b94;
     --cinza-escuro: #1E272E;
-    --cinza-claro: #F5F6FA;
-    --branco: #FFFFFF;
+    --cinza-claro: #F5F6FA; 
+    --cinza: #e6e6e6;
+    --branco: #F8F9FA;
     --laranja: #C65D21;
     --dourado: #C9A227;
     --sombra: 0 10px 30px rgba(0,0,0,0.08);
 }
 html { scroll-behavior: smooth; }
-body { font-family: 'Montserrat', sans-serif; color: var(--cinza-escuro); line-height: 1.7; background: var(--branco); }
+body { font-family: 'Montserrat', sans-serif; color: var(--cinza-escuro); line-height: 1.7; background: var(--cinza); }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; color: var(--azul-petroleo); }
 h1 { font-size: 3.2rem; line-height: 1.2; }
@@ -20,7 +21,7 @@ p { margin-bottom: 16px; color: #555; }
 .btn-primary, .btn-secondary, .btn-nav, .btn-whatsapp {
     padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; display: inline-block; border: none; cursor: pointer;
 }
-.btn-primary { background: var(--laranja); color: var(--branco); }
+.btn-primary { background: var(--laranja); color: var(--cinza-claro); }
 .btn-primary:hover { background: var(--dourado); transform: translateY(-2px); box-shadow: var(--sombra); }
 .btn-secondary { background: transparent; color: var(--branco); border: 2px solid var(--branco); }
 .btn-secondary:hover { background: var(--branco); color: var(--azul-petroleo); }
@@ -92,4 +93,36 @@ footer { background: #0D1117; color: rgba(255,255,255,0.7); padding: 60px 0 0; }
     .hero-cta { flex-direction: column; }
     .sobre-grid, .contato-grid, .footer-grid { grid-template-columns: 1fr; }
     section { padding: 60px 0; }
+}
+
+.menu-toggle { 
+    display: none; 
+    background: none; 
+    border: none; 
+    font-size: 1.8rem; 
+    color: var(--azul-petroleo); 
+    cursor: pointer; 
+}
+
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    .nav-links { 
+        display: none; 
+        position: absolute; 
+        top: 80px; 
+        left: 0; 
+        width: 100%; 
+        background: var(--branco-gelo); 
+        flex-direction: column; 
+        padding: 20px; 
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        gap: 0;
+    }
+    .nav-links.active { display: flex; }
+    .nav-links li { 
+        padding: 12px 0; 
+        border-bottom: 1px solid #eee; 
+    }
+    .nav-links li:last-child { border-bottom: none; }
+    .btn-nav { display: none; }
 }

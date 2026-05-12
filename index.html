@@ -16,7 +16,7 @@
                 <li><a href="./SobreNos.html">Sobre nós</a></li>
                 <li><a href="#laudos">Laudos</a></li>
                 <li><a href="#vistorias">Vistorias</a></li>
-                <li><a href="#pericias">Perícias</a></li>
+                <li><a href="#etapas">Etapas</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
             <a href="#contato" class="btn-nav">Solicitar Avaliação</a>
@@ -39,7 +39,6 @@
         <div class="container">
             <div class="sobre-grid">
                 <div class="sobre-texto">
-                    <span class="tag">Foco em Laudos e Vistorias</span>
                     <h2>Engenharia especializada em diagnóstico técnico</h2>
                     <p>Oferecemos serviços técnicos especializados para avaliação, diagnóstico e emissão de laudos em imóveis e estruturas. Nosso trabalho é fundamentado em critérios técnicos e normativos, garantindo segurança e confiabilidade nas análises.</p>
                     <p>Atendemos tanto demandas preventivas quanto corretivas.</p>
@@ -61,7 +60,7 @@
         </div>
     </section>
 
-    <section id="laudos" class="servicos">
+    <section id="laudos" class="servicos" style="background-color: #ffff;">
         <div class="container">
             <div class="section-header">
                 <span class="tag">Laudos Técnicos</span>
@@ -96,7 +95,6 @@
     <section id="vistorias" class="servicos bg-light">
         <div class="container">
             <div class="section-header">
-                <span class="tag">Vistorias Técnicas</span>
                 <h2>Vistorias Cautelares e de Entrega</h2>
                 <p>Proteja seu patrimônio antes, durante e após obras com vistorias técnicas detalhadas e fotográficas.</p>
             </div>
@@ -125,11 +123,10 @@
         </div>
     </section>
 
-    <section id="pericias" class="diferenciais">
+    <section id="etapas" class="diferenciais">
         <div class="container">
             <div class="section-header">
-                <span class="tag">Perícias</span>
-                <h2>Perícias Judiciais e Extrajudiciais</h2>
+                <h2>Etapas do serviço</h2>
             </div>
             <div class="diferenciais-grid">
                 <div class="dif-item">
@@ -168,19 +165,19 @@
                     <div class="contato-item"><i class="fa-solid fa-envelope"></i> <span>Crea: 1234567</span></div>
                     <div class="contato-item"><i class="fa-solid fa-envelope"></i> <span>Engenheiros Civis</span></div>
                     <div class="contato-item"><i class="fa-solid fa-location-dot"></i> <span>Praia Grande, SP - Atendemos toda a Baixada Santista</span></div>
-                    <a href="https://wa.me/5513999999999" target="_blank" class="btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp</a>
+                    <a href="https://wa.me/5511982879645" target="_blank" class="btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp</a>
                 </div>
                 <form class="form-contato" id="form-contato">
-                    <input type="text" placeholder="Nome completo" required>
-                    <input type="tel" placeholder="Telefone/WhatsApp" required>
-                    <select required>
+                    <input type="text" id="nome" placeholder="Nome completo" required>
+                    <input type="tel" id="telefone" placeholder="Telefone/WhatsApp" required>
+                    <select id="servico" required>
                         <option value="">Tipo de serviço</option>
                         <option>Laudo de Avaliação</option>
                         <option>Laudo de Inspeção Predial</option>
                         <option>Vistoria Cautelar</option>
                         <option>Vistoria de Entrega</option>
                     </select>
-                    <textarea placeholder="Descreva brevemente sua necessidade..." rows="4"></textarea>
+                    <textarea id="mensagem" placeholder="Descreva brevemente sua necessidade..." rows="4"></textarea>
                     <button type="submit" class="btn-primary">Enviar Solicitação</button>
                 </form>
             </div>
@@ -197,7 +194,7 @@
                 <h4>Serviços</h4>
                 <a href="#laudos">Laudos Técnicos</a>
                 <a href="#vistorias">Vistorias</a>
-                <a href="#pericias">Perícias</a>
+                <a href="#etapas">Etapas</a>
             </div>
             <div class="footer-links">
                 <h4>Empresa</h4>
@@ -218,5 +215,7 @@
     </footer>
 
     <script src="script.js"></script>
+
+    
 </body>
 </html>
