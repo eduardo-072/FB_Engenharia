@@ -1,9 +1,9 @@
 // Header scroll effect
 window.addEventListener('scroll', () => {
     const header = document.getElementById('header');
-    if (window.scrollY > 50) {
+    if (header && window.scrollY > 50) {
         header.classList.add('scrolled');
-    } else {
+    } else if (header) {
         header.classList.remove('scrolled');
     }
 });
@@ -11,20 +11,42 @@ window.addEventListener('scroll', () => {
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        const target = document.querySelector(href);
         if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            e.preventDefault();
+            const headerOffset = 80;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
         }
     });
 });
 
-// Form submission
-document.getElementById('form-contato').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Solicitação enviada! Nossa equipe técnica entrará em contato em até 24h.');
-    this.reset();
-});
+// Form WhatsApp - só executa se existir o form
+const formContato = document.getElementById('form-contato');
+if (formContato) {
+    formContato.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const nome = document.getElementById('nome')?.value || '';
+        const telefone = document.getElementById('telefone')?.value || '';
+        const servico = document.getElementById('servico')?.value || '';
+        const mensagem = document.getElementById('mensagem')?.value || '';
+        
+        let texto = `*Nova Solicitação - Site Ferrari & Bulcão*%0A%0A`;
+        texto += `*Nome:* ${nome}%0A`;
+        texto += `*WhatsApp:* ${telefone}%0A`;
+        texto += `*Serviço:* ${servico}%0A`;
+        texto += `*Descrição:* ${mensagem}`;
+        
+        const seuNumero = '5511982879645';
+        const link = `https://wa.me/${seuNumero}?text=${encodeURIComponent(texto)}`;
+        window.open(link, '_blank');
+        this.reset();
+    });
+}
 
 // Animate stats on scroll
 const observer = new IntersectionObserver((entries) => {
@@ -49,45 +71,46 @@ menuToggle.classList.add('menu-toggle');
 menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
 menuToggle.setAttribute('aria-label', 'Abrir menu');
 
-document.querySelector('nav').insertBefore(menuToggle, document.querySelector('.nav-links'));
+document.addEventListener('DOMContentLoaded', () => {
+    const navElement = document.querySelector('nav');
+    const navLinks = document.querySelector('.nav-links');
 
-menuToggle.addEventListener('click', () => {
-    document.querySelector('.nav-links').classList.toggle('active');
-    const icon = menuToggle.querySelector('i');
-    if (document.querySelector('.nav-links').classList.contains('active')) {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-xmark');
-    } else {
-        icon.classList.remove('fa-xmark');
-        icon.classList.add('fa-bars');
+    if (!navElement || !navLinks) {
+        console.warn('Nav ou .nav-links não encontrados');
+        return;
     }
-});
 
-// Fechar menu ao clicar no link
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.querySelector('.nav-links').classList.remove('active');
-        menuToggle.querySelector('i').classList.remove('fa-xmark');
-        menuToggle.querySelector('i').classList.add('fa-bars');
-    });
-});
+    if (!document.querySelector('.menu-toggle')) {
+        const menuToggle = document.createElement('button');
+        menuToggle.classList.add('menu-toggle');
+        menuToggle.setAttribute('aria-label', 'Abrir menu');
+        menuToggle.innerHTML = '☰';
+        
+        navElement.insertBefore(menuToggle, navLinks);
 
-document.getElementById('form-contato').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const nome = document.getElementById('nome').value;
-    const telefone = document.getElementById('telefone').value;
-    const servico = document.getElementById('servico').value;
-    const mensagem = document.getElementById('mensagem').value;
-    
-    let texto = `*Nova Solicitação - Site Ferrari & Bulcão*%0A%0A`;
-    texto += `*Nome:* ${nome}%0A`;
-    texto += `*WhatsApp:* ${telefone}%0A`;
-    texto += `*Serviço:* ${servico}%0A`;
-    texto += `*Descrição:* ${mensagem}`;
-    
-    const seuNumero = '5511982879645'; // Peguei o número que já tá no seu botão do WhatsApp
-    
-    const link = `https://wa.me/${seuNumero}?text=${encodeURIComponent(texto)}`;
-    window.open(link, '_blank');
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+            menuToggle.innerHTML = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+                menuToggle.innerHTML = '☰';
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('active') && 
+                !navLinks.contains(e.target) && 
+                !menuToggle.contains(e.target)) {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+                menuToggle.innerHTML = '☰';
+            }
+        });
+    }
 });

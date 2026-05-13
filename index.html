@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-grid.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-utilities.min.css" rel="stylesheet">
+
+<style>
+/* Cola só o CSS do accordion do Bootstrap */
+
+</style>
+    
 </head>
 <body>
     <header id="header">
@@ -17,6 +26,7 @@
                 <li><a href="#laudos">Laudos</a></li>
                 <li><a href="#vistorias">Vistorias</a></li>
                 <li><a href="#etapas">Etapas</a></li>
+                <li><a href="./Regularização.html">Regularização</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
             <a href="#contato" class="btn-nav">Solicitar Avaliação</a>
@@ -27,7 +37,9 @@
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <h1>Laudos e Vistorias com <span>Excelência Técnica</span></h1>
-            <p>Segurança, precisão e responsabilidade técnica para o seu imóvel. Especialistas em diagnóstico estrutural e avaliações fundamentadas em critérios normativos.</p>
+            <p> Análise detalhada do imóvel, obra ou reforma para prevenir dores de cabeça e prejuízos futuros.
+                Engenheiro responsável com ART e laudos 100% dentro das Normas Brasileiras.</p>
+
             <div class="hero-cta">
                 <a href="#contato" class="btn-primary">Solicitar Laudo Técnico</a>
                 <a href="#laudos" class="btn-secondary">Conheça os Serviços</a>
@@ -40,8 +52,12 @@
             <div class="sobre-grid">
                 <div class="sobre-texto">
                     <h2>Engenharia especializada em diagnóstico técnico</h2>
-                    <p>Oferecemos serviços técnicos especializados para avaliação, diagnóstico e emissão de laudos em imóveis e estruturas. Nosso trabalho é fundamentado em critérios técnicos e normativos, garantindo segurança e confiabilidade nas análises.</p>
-                    <p>Atendemos tanto demandas preventivas quanto corretivas.</p>
+                    <p> 
+                        Seu imóvel merece o melhor cuidado! Nossos Laudos Técnicos oferecem uma análise detalhada 
+                        das condições do seu imóvel, identificando e resolvendo possíveis problemas antes que eles 
+                        se tornem grandes dores de cabeça. Atendendo às Normas Brasileiras vigentes e protegendo o 
+                        seu patrimônio
+                    </p>
                 </div>
 
                 
@@ -53,8 +69,20 @@
 
                     <div class="stat-card">
                         <h3 style="font-size: 35px; font-family: times">Atendimentos</h3>
-                        <p>Atendemos em toda baixada santista</p>
+                        <p>Atendemos em todo estado de São Paulo</p>
                     </div>
+
+                    <div class="stat-card">
+                        <h3 style="font-size: 35px; font-family: times">Conformidade</h3>
+                        <p>Seguimos às NBRs (Normas Brasileiras)</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3 style="font-size: 35px; font-family: times">Vistorias</h3>
+                        <p>Fazemos vistorias completas conforme a ART</p>
+                    </div>
+
+                    
                     </div>
             </div>
         </div>
@@ -63,7 +91,6 @@
     <section id="laudos" class="servicos" style="background-color: #ffff;">
         <div class="container">
             <div class="section-header">
-                <span class="tag">Laudos Técnicos</span>
                 <h2>Laudos de Avaliação e Inspeção</h2>
                 <p>Documentos técnicos elaborados conforme normas da ABNT para garantir segurança jurídica e construtiva do seu patrimônio.</p>
             </div>
@@ -123,6 +150,8 @@
         </div>
     </section>
 
+    
+
     <section id="etapas" class="diferenciais">
         <div class="container">
             <div class="section-header">
@@ -150,6 +179,78 @@
                     <p>Compromisso com prazos. Entendemos a urgência de laudos para processos e negociações imobiliárias.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+ <section id="etapas" class="diferenciais">
+    <div class="accordion" id="accordionExample">
+                <h2 style="text-align: center;">Dúvidas frequentes</h2>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Quais são as diferenças entre um Laudo, uma ART e um RRT?
+            </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <p>
+                    Um laudo é um documento técnico resultante da análise de um assunto específico. A ART é uma Anotação 
+                    de Responsabilidade Técnica, emitida pelo CREA. Já o RRT é o Registro de Responsabilidade Técnica,
+                    emitido por um profissional vinculado ao CAU (Conselho de Arquitetura e Urbanismo). Todo serviço 
+                    prestado por um profissional registrado em um conselho regulamentador (como o CREA ou CAU) precisa 
+                    ser acompanhado de uma ART ou RRT para possuir valor legal.
+                </p>
+            </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                O Laudo Técnico é válido juridicamente?
+            </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <p>
+                    Sim, um laudo técnico elaborado por um <strong>engenheiro cívil registrado</strong> é um documento oficial e pode ser 
+                    usado em disputas judiciais, processos de seguro e outras situações legais.
+                </p>
+            </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Como a elaboração de um Laudo Técnico pode me ajudar a economizar dinheiro?
+            </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <p>
+                    Identificando problemas precocemente, evitando reparos caros no futuro, e orientando manutenções preventivas 
+                    que prolongam a vida útil do imóvel, resultando em menos despesas ao longo do tempo.
+                </p>
+            </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Qual é o valor e em quanto tempo meu Laudo fica pronto?
+
+            </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <p>
+                    O valor para a elaboração de um Laudo Técnico varia conforme a complexidade, tipo de laudo e prazo de entrega, 
+                    com preços a partir de R$ 299,00 (ART e taxa <strong>NÃO inclusas</strong>). O laudo é geralmente concluído em até 24 horas, 
+                    podendo exceder esse prazo em casos específicos, sempre com o acordo do cliente.
+                </p>
+            </div>
+            </div>
+        </div>
         </div>
     </section>
 
@@ -216,6 +317,6 @@
 
     <script src="script.js"></script>
 
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
