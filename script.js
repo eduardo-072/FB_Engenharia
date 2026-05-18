@@ -66,51 +66,56 @@ document.querySelectorAll('.card-servico, .stat-card, .dif-item').forEach(el => 
 });
 
 // Menu hamburguer
-const menuToggle = document.createElement('button');
-menuToggle.classList.add('menu-toggle');
-menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
-menuToggle.setAttribute('aria-label', 'Abrir menu');
-
+// Menu hamburguer - VERSÃO CORRIGIDA
 document.addEventListener('DOMContentLoaded', () => {
-    const navElement = document.querySelector('nav');
-    const navLinks = document.querySelector('.nav-links');
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
 
-    if (!navElement || !navLinks) {
-        console.warn('Nav ou .nav-links não encontrados');
+    // Só executa se os elementos existirem
+    if (!menuToggle || !navLinks) {
+        console.warn('Menu hambúrguer: #menuToggle ou #navLinks não encontrados');
         return;
     }
 
-    if (!document.querySelector('.menu-toggle')) {
-        const menuToggle = document.createElement('button');
-        menuToggle.classList.add('menu-toggle');
-        menuToggle.setAttribute('aria-label', 'Abrir menu');
-        menuToggle.innerHTML = '☰';
+    // Abre/fecha menu
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active');
         
-        navElement.insertBefore(menuToggle, navLinks);
+        // Troca ícone entre hambúrguer e X
+        const icon = menuToggle.querySelector('i');
+        if (icon) {
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        }
+    });
 
-        menuToggle.addEventListener('click', (e) => {
-            e.stopPropagation();
-            navLinks.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-            menuToggle.innerHTML = navLinks.classList.contains('active') ? '✕' : '☰';
-        });
-
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                menuToggle.classList.remove('active');
-                menuToggle.innerHTML = '☰';
-            });
-        });
-
-        document.addEventListener('click', (e) => {
-            if (navLinks.classList.contains('active') && 
-                !navLinks.contains(e.target) && 
-                !menuToggle.contains(e.target)) {
-                navLinks.classList.remove('active');
-                menuToggle.classList.remove('active');
-                menuToggle.innerHTML = '☰';
+    // Fecha ao clicar nos links
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            menuToggle.classList.remove('active');
+            const icon = menuToggle.querySelector('i');
+            if (icon) {
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-xmark');
             }
         });
-    }
+    });
+
+    // Fecha ao clicar fora
+    document.addEventListener('click', (e) => {
+        if (navLinks.classList.contains('active') && 
+            !navLinks.contains(e.target) && 
+            !menuToggle.contains(e.target)) {
+            navLinks.classList.remove('active');
+            menuToggle.classList.remove('active');
+            const icon = menuToggle.querySelector('i');
+            if (icon) {
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-xmark');
+            }
+        }
+    });
 });

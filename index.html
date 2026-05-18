@@ -12,30 +12,37 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-utilities.min.css" rel="stylesheet">
 
 <style>
-/* Cola só o CSS do accordion do Bootstrap */
 </style>
     
 </head>
 <body>
+<header id="header">
+  <nav class="container">
+    <a href="./index.html" class="logo-link">
+      <div class="logo">FB<span>Engenharia</span></div>
+    </a>
+    
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    
+    <ul class="nav-links" id="navLinks">
+      <li><a href="./index.html">Início</a></li>
+      <li><a href="./SobreNos.html">Sobre nós</a></li>
+      <li><a href="./index.html#servicos">Serviços</a></li>
+      <li><a href="./regularizacao.html">Regularização</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    
+    <a href="#contato" class="btn-nav">Solicitar Avaliação</a>
+  </nav>
+</header>
 
-    <header id="header">
-        <nav class="container">
-            <a style="text-decoration: none;" href="#inicio"><div class="logo">FB<span>Engenharia</span></div></a>
-            <ul class="nav-links">
-                <li><a href="./SobreNos.html">Sobre nós</a></li>
-                <li><a href="#laudos">Laudos & Vistorias</a></li>
-                <li><a href="#etapas">Projetos</a></li>
-                <li><a href="./regularizacao.html">Regularização de imóveis</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-            <a href="#contato" class="btn-nav">Solicitar Avaliação</a>
-        </nav>
-    </header>
-
+    <main>
     <section id="inicio" class="hero">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <h1>Laudos e Vistorias com <span>Excelência Técnica</span></h1>
+            <h1 style="color: var(--branco);">Laudos e Vistorias com <span>Excelência Técnica</span></h1>
             <p> Análise detalhada do imóvel, obra ou reforma para prevenir dores de cabeça e prejuízos futuros.
                 Engenheiro responsável com ART e laudos 100% dentro das Normas Brasileiras.</p>
 
@@ -87,12 +94,12 @@
         </div> -->
     </section>
 
-    <section id="laudos" class="servicos" style="background-color: #ffff;">
+    <section id="laudos" class="servicos" style="background-color: var(--gradienteCinzaBranco)">
         <div class="container">
             
             <div class="sobre-grid">
                 <div class="sobre-texto">
-                    <h2 style="color: var(--azul-petroleo);">Porque deve emitir um laudo técnico? </h2>
+                    <h2 style="color: var(--azul-claro);">Porque deve emitir um laudo técnico? </h2>
 
                     <p> 
                         Seu imóvel merece o melhor cuidado! Nossos Laudos Técnicos oferecem uma análise detalhada 
@@ -101,25 +108,54 @@
                         seu patrimônio
                     </p>
                 </div>
-
                 
                 <div class="sobre-stats">             
-                    <ul class="lista-dash">
-                    <h3 style="color: var(--azul-petroleo);">Conheça nossos serviços</h3>
-
-                        <li>Laudo de Reforma e Plano de Obra conforme Norma Brasileira</li>
-                        <li>Laudo Técnico de Segurança e Estabilidade</li>
-                        <li>Laudo de Inspeção Predial</li>
-                        <li>Vistoria Locativa</li>
-                        <li>Vistoria de Imóvel Novo</li>
-                        <li>Executamos reformas completas ou parciais com foco em modernização</li>
-                        <li>Desenvolvemos projetos completos e personalizados</li>
-                        <li>Plano de Manutenção</li>
-                        <li>Assessoria Condominial</li>
-                     </ul>
-
-                </div>
-            </div>
+    <div class="card-servicos-lista">
+        <div class="card-header">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <h3>Conheça nossos serviços</h3>
+        </div>
+        
+        <ul class="lista-servicos">
+            <li>
+                <i class="fa-solid fa-check"></i>
+                <span>Laudo de Reforma e Plano de Obra conforme Norma Brasileira</span>
+            </li>
+            <li>
+                <i class="fa-solid fa-check"></i>
+                <span>Laudo Técnico de Segurança e Estabilidade</span>
+            </li>
+            <li>
+                <i class="fa-solid fa-check"></i>
+                <span>Laudo de Inspeção Predial</span>
+            </li>
+            <li>
+                <i class="fa-solid fa-check"></i>
+                <span>Vistoria Locativa</span>
+            </li>
+            <li>
+                <i class="fa-solid fa-check"></i>
+                <span>Vistoria de Imóvel Novo</span>
+            </li>
+            <li>
+                <i class="fa-solid fa-check"></i>
+                <span>Executamos reformas completas ou parciais com foco em modernização</span>
+            </li>
+            <li>
+                <i class="fa-solid fa-check"></i>
+                <span>Desenvolvemos projetos completos e personalizados</span>
+            </li>
+            <li>
+                <i class="fa-solid fa-check"></i>
+                <span>Plano de Manutenção</span>
+            </li>
+            <li>
+                <i class="fa-solid fa-check"></i>
+                <span>Assessoria Condominial</span>
+            </li>
+        </ul>
+    </div>
+</div>
             
         </div>
     </section>
@@ -161,9 +197,8 @@
 
             </div>
         </div>
-    </section>
 
-    <section id="etapas" class="Etapas">
+    <section id="etapas" class="realizadas">
         <div class="container">
             <div class="section-header">
                 <h4 style="font-size: 40px;"><strong>Vistorias realizadas</strong></h4>
@@ -193,111 +228,119 @@
         </div>
     </section>
 
- <section id="etapas" class="diferenciais">
-    <div class="accordion" id="accordionExample">
-                <h2 style="text-align: center;">Dúvidas frequentes</h2>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Quais são as diferenças entre um Laudo, uma ART e um RRT?
-            </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                <p>
-                    Um laudo é um documento técnico resultante da análise de um assunto específico. A ART é uma Anotação 
-                    de Responsabilidade Técnica, emitida pelo CREA. Já o RRT é o Registro de Responsabilidade Técnica,
-                    emitido por um profissional vinculado ao CAU (Conselho de Arquitetura e Urbanismo). Todo serviço 
-                    prestado por um profissional registrado em um conselho regulamentador (como o CREA ou CAU) precisa 
-                    ser acompanhado de uma ART ou RRT para possuir valor legal.
-                </p>
-            </div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                O Laudo Técnico é válido juridicamente?
-            </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                <p>
-                    Sim, um laudo técnico elaborado por um <strong>engenheiro cívil registrado</strong> é um documento oficial e pode ser 
-                    usado em disputas judiciais, processos de seguro e outras situações legais.
-                </p>
-            </div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Como a elaboração de um Laudo Técnico pode me ajudar a economizar dinheiro?
-            </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                <p>
-                    Identificando problemas precocemente, evitando reparos caros no futuro, e orientando manutenções preventivas 
-                    que prolongam a vida útil do imóvel, resultando em menos despesas ao longo do tempo.
-                </p>
-            </div>
-            </div>
-        </div>
 
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                Qual é o valor e em quanto tempo meu Laudo fica pronto?
-
-            </button>
-            </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                <p>
-                    O valor para a elaboração de um Laudo Técnico varia conforme a complexidade, tipo de laudo e prazo de entrega, 
-                    com preços a partir de R$ 299,00 (ART e taxa <strong>NÃO inclusas</strong>). O laudo é geralmente concluído em até 24 horas, 
-                    podendo exceder esse prazo em casos específicos, sempre com o acordo do cliente.
-                </p>
-            </div>
-            </div>
+<section id="etapas" class="diferenciais">
+  <div class="container">
+    <div class="section-header">
+      <h2 style="text-align: center;">Dúvidas frequentes</h2>
+    </div>
+    
+    <div class="accordion" id="accordionFAQ">
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            Quais são as diferenças entre um Laudo, uma ART e um RRT?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+          <div class="accordion-body">
+            <p>
+              Um laudo é um documento técnico resultante da análise de um assunto específico. A ART é uma Anotação 
+              de Responsabilidade Técnica, emitida pelo CREA. Já o RRT é o Registro de Responsabilidade Técnica,
+              emitido por um profissional vinculado ao CAU (Conselho de Arquitetura e Urbanismo). Todo serviço 
+              prestado por um profissional registrado em um conselho regulamentador (como o CREA ou CAU) precisa 
+              ser acompanhado de uma ART ou RRT para possuir valor legal.
+            </p>
+          </div>
         </div>
+      </div>
 
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                Em que situações devo solicitar um Laudo Técnico?
-
-            </button>
-            </h2>
-            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                <p>
-                    Laudos Técnicos são importantes em diversas situações, como reformas, compra ou venda de imóveis, 
-                    identificação de problemas estruturais, disputas judiciais, inspeções periódicas e manutenção preventiva.
-                </p>
-            </div>
-            </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            O Laudo Técnico é válido juridicamente?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+          <div class="accordion-body">
+            <p>
+              Sim, um laudo técnico elaborado por um <strong>engenheiro civil registrado</strong> é um documento oficial e pode ser 
+              usado em disputas judiciais, processos de seguro e outras situações legais.
+            </p>
+          </div>
         </div>
+      </div>
 
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                Quais são os benefícios de contratar um engenheiro para elaborar um Laudo Técnico?
-            </button>
-            </h2>
-            <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                <p>
-                    Os benefícios incluem a prevenção de problemas judiciais, aumento da vida útil do imóvel, economia de custos futuros, 
-                    valorização do imóvel, garantia da segurança e detecção e resolução de anomalias estruturais.
-                </p>
-            </div>
-            </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Como a elaboração de um Laudo Técnico pode me ajudar a economizar dinheiro?
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+          <div class="accordion-body">
+            <p>
+              Identificando problemas precocemente, evitando reparos caros no futuro, e orientando manutenções preventivas 
+              que prolongam a vida útil do imóvel, resultando em menos despesas ao longo do tempo.
+            </p>
+          </div>
         </div>
-        </div>
-    </section>
+      </div>
 
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            Qual é o valor e em quanto tempo meu Laudo fica pronto?
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+          <div class="accordion-body">
+            <p>
+              O valor para a elaboração de um Laudo Técnico varia conforme a complexidade, tipo de laudo e prazo de entrega, 
+              com preços a partir de R$ 299,00 (ART e taxa <strong>NÃO inclusas</strong>). O laudo é geralmente concluído em até 24 horas, 
+              podendo exceder esse prazo em casos específicos, sempre com o acordo do cliente.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            Em que situações devo solicitar um Laudo Técnico?
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+          <div class="accordion-body">
+            <p>
+              Laudos Técnicos são importantes em diversas situações, como reformas, compra ou venda de imóveis, 
+              identificação de problemas estruturais, disputas judiciais, inspeções periódicas e manutenção preventiva.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+            Quais são os benefícios de contratar um engenheiro para elaborar um Laudo Técnico?
+          </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+          <div class="accordion-body">
+            <p>
+              Os benefícios incluem a prevenção de problemas judiciais, aumento da vida útil do imóvel, economia de custos futuros, 
+              valorização do imóvel, garantia da segurança e detecção e resolução de anomalias estruturais.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
     <section id="contato" class="contato">
         <div class="container">
             <div class="contato-grid">
@@ -329,7 +372,7 @@
             </div>
         </div>
     </section>
-
+    
     <footer>
         <div class="container footer-grid">
             <div class="footer-brand">
@@ -338,14 +381,14 @@
             </div>
             <div class="footer-links">
                 <h4>Serviços</h4>
-                <a href="#laudos">Laudos Técnicos</a>
-                <a href="#vistorias">Vistorias</a>
-                <a href="#etapas">Etapas</a>
+                <a href="index.html#laudos">Laudos Técnicos</a>
+                <a href="index.html#vistorias">Vistorias</a>
+                <a href="index.html#pericias">Perícias</a>
             </div>
             <div class="footer-links">
                 <h4>Empresa</h4>
-                <a href="#sobre">Sobre</a>
-                <a href="#contato">Contato</a>
+                <a href="about.html">Sobre Nós</a>
+                <a href="index.html#contato">Contato</a>
             </div>
             <div class="footer-social">
                 <h4>Redes Sociais</h4>
@@ -359,6 +402,7 @@
             <p>&copy; 2026 Ferrari & Bulcão Engenharia. Todos os direitos reservados. CREA-SP XXXXXX</p>
         </div>
     </footer>
+    
 
     <script src="script.js"></script>
 
