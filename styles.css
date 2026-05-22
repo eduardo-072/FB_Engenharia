@@ -26,6 +26,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+
+   
 }
 
 .container { max-width: 1400px; margin: 0 auto; padding: 0 24px; color: var(--cinza-escuro)}
@@ -117,10 +119,10 @@ nav {
 .hero-overlay { position: absolute; inset: 0; background: var(--gradienteAzul); }
 .hero-content { position: relative; color: var(--branco); max-width: 700px; }
 .hero-content h1 span { color: var(--azul); }
-.hero-content p { font-size: 1.2rem; color: rgba(255,255,255,0.9); margin: 24px 0 32px; }
+.hero-content p { font-size: 1.2rem; color: rgba(255,255,255,0.9); margin-bottom: 24px; }
 .hero-cta { display: flex; gap: 16px; }
 
-section { padding: 100px 0; position: relative;}
+section { padding: 60px 0; position: relative; }
 .bg-light { background: var(--branco); }
 .section-header { max-width: 700px; margin: 0 auto 60px; text-align: center; }
 
@@ -143,9 +145,7 @@ section { padding: 100px 0; position: relative;}
 
 .sobre-grid { 
   display: grid; 
-  grid-template-columns: 
-  1fr 1fr; 
-  gap: 40px; 
+  grid-template-columns: 1fr 1fr; 
   align-items: center;
 }
 .sobre-stats { display: grid; gap: 20px; }
@@ -219,8 +219,7 @@ section { padding: 100px 0; position: relative;}
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
-  margin-bottom: 140px;
-
+  margin-bottom: 40px;
 }
 
 .servicos{
@@ -232,13 +231,23 @@ section { padding: 100px 0; position: relative;}
 }
 
 .regularização h2{
-  margin: 23px;
+  margin: 0px;
 }
 
 .diferenciais-grid { 
   display: grid; 
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-  gap: 32px; /* 40px é muito pra 4 colunas */
+  gap: 20px;
+}
+
+.diferenciais-grid h4{
+  text-align: center;
+}
+
+.diferenciais-grid img{
+  height: 250px;
+  width: 300px;
+  border-radius: 10px;
 }
 
 .Etapas{
@@ -248,9 +257,8 @@ section { padding: 100px 0; position: relative;}
 .dif-item p{
   color: var(--cinza-medio);
 }
-.dif-item { text-align: center; .dif-item i { font-size: 2.5rem; color: var(--laranja); margin-bottom: 16px; }}
 
-.contato { background: var(--cinza-escuro); color: var(--branco); }
+.contato { padding: 50px 0; background: var(--cinza-escuro); color: var(--branco); }
 .contato h2, .contato .tag { color: var(--branco); }
 .contato .tag { background: rgba(255,255,255,0.1); }
 .contato-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: start; }
@@ -264,29 +272,17 @@ section { padding: 100px 0; position: relative;}
 footer { background: #0D1117; color: rgba(255,255,255,0.7); padding: 60px 0 0; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; }
 .footer-brand .logo { color: var(--branco); margin-bottom: 16px; }
-.footer-links h4, .footer-social h4 { color: var(--branco); margin-bottom: 16px; font-size: 1.1rem; }
-.footer-links a { display: block; color: rgba(255,255,255,0.7); text-decoration: none; margin-bottom: 10px; transition: color 0.3s; }
-.footer-links a:hover { color: var(--dourado); }
+.footer-brand p {color: var(--azul);}
+.footer-links h4, .footer-social h4 { color: var(--azul); margin-bottom: 16px; font-size: 1.1rem; }
+.footer-links a { display: inline-block; color: var(--branco); text-decoration: none; margin-bottom: 10px; transition: color 0.3s; }
+.footer-links a:hover { color: var(--azul-claro); }
 .social-icons { display: flex; gap: 16px; }
 .social-icons a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--branco); transition: all 0.3s; }
 .social-icons a:hover { background: var(--laranja); }
-.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding: 20px 0; text-align: center; font-size: 0.9rem; }
-
-/*Tratamento de imagens*/
-  img {
-    height: 200px;
-    border-radius: 10px;
-}
+.footer-bottom { border-top: 1px solid var(--cinza-medio); padding: 20px 0; text-align: center; font-size: 0.9rem; }
+.footer-bottom p{ color: var(--branco);}
 
 /* tramento de itens separados*/
-
-.caracteristicas{
-  color: var(--branco);
-}
-
-/* CSS do acordion */
-/* ===== ACCORDION CUSTOM - SEM BOOTSTRAP ===== */
-
 /* ===== ACCORDION FINAL - TRANSPARENTE + BRANCO + ARREDONDADO ===== */
 #accordionFAQ {
   max-width: 900px;
