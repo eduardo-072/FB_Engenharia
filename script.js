@@ -35,15 +35,15 @@ if (formContato) {
         const servico = document.getElementById('servico')?.value || '';
         const mensagem = document.getElementById('mensagem')?.value || '';
         
-        let texto = `*Nova Solicitação - Site Ferrari & Bulcão*%0A%0A`;
-        texto += `*Nome:* ${nome}%0A`;
-        texto += `*WhatsApp:* ${telefone}%0A`;
-        texto += `*Serviço:* ${servico}%0A`;
-        texto += `*Descrição:* ${mensagem}`;
-        
-        const seuNumero = '5511982879645';
-        const link = `https://wa.me/${seuNumero}?text=${encodeURIComponent(texto)}`;
-        window.open(link, '_blank');
+        let texto = `*Nova Solicitação - Site Ferrari & Bulcão*\n\n`;
+            texto += `*Nome:* ${nome}\n`;
+            texto += `*WhatsApp:* ${telefone}\n`;
+            texto += `*Serviço:* ${servico}\n`;
+            texto += `*Descrição:* ${mensagem}`;
+
+            const seuNumero = '5511982879645';
+            const link = `https://wa.me/${seuNumero}?text=${encodeURIComponent(texto)}`;
+            window.open(link, '_blank');
         this.reset();
     });
 }
