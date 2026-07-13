@@ -245,7 +245,7 @@ section { padding: 60px 0; position: relative; }
 }
 
 .diferenciais-grid img{
-  height: 250px;
+  height: 320px;
   width: 300px;
   border-radius: 10px;
 }
@@ -258,6 +258,11 @@ section { padding: 60px 0; position: relative; }
 
 .dif-item p{
   color: var(--cinza-medio);
+}
+
+.dif-item1 img{
+  height: 600px;
+  width: 300px;
 }
 
 .contato { padding: 50px 0; background: var(--cinza-escuro); color: var(--branco); }
@@ -279,7 +284,7 @@ footer { background: #0D1117; color: rgba(255,255,255,0.7); padding: 60px 0 0; }
 .footer-links a { display: block; color: var(--branco); text-decoration: none; margin-bottom: 10px; transition: color 0.3s; }
 .footer-links a:hover { color: var(--azul-claro); }
 .social-icons { display: flex; gap: 16px; }
-.social-icons a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--branco); transition: all 0.3s; }
+.social-icons a {  text-decoration: none; width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--branco); transition: all 0.3s; }
 .social-icons a:hover { background: var(--laranja); }
 .footer-bottom { border-top: 1px solid var(--cinza-medio); padding: 20px 0; text-align: center; font-size: 0.9rem; }
 .footer-bottom p{ color: var(--branco);}
@@ -653,7 +658,7 @@ footer { background: #0D1117; color: rgba(255,255,255,0.7); padding: 60px 0 0; }
     font-size: 1.1rem;
     padding: 16px 0;
     width: 100%;
-    transition: all .3s;
+
   }
 
   .nav-links a:hover {
@@ -696,4 +701,17 @@ footer { background: #0D1117; color: rgba(255,255,255,0.7); padding: 60px 0 0; }
     .hero-content h1 {
         font-size: 2.2rem;
     }
+}
+
+/*Logo da empresa*/
+@media (max-width: 480px) {
+  .logoEmpresa {
+    height: 110px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .logoEmpresa {
+    height: 100px;
+  }
 }

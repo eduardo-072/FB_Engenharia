@@ -14,34 +14,44 @@
 
     <header id="header">
         <nav class="container">
-            <a style="text-decoration: none;" href="#inicio">
-                <div class="logo">FB<span>Engenharia</span></div>
+            <a href="./index.html" class="logoEmpresa" aria-label="Voltar para página inicial">
+            <img src="./img/logo.png" alt="Ferrari & Bulcão Engenharia" class="logoEmpresa">
             </a>
-            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+            <i class="fa-solid fa-bars"></i>
+            </button>  
             <ul class="nav-links" id="navLinks">
-                <li><a href="./index.html">Início</a></li>
-                <li><a href="#riscos">Riscos</a></li>
-                <li><a href="./SobreNos.html">Sobre nós</a></li>
-                <li><a href="#regularize">Regularize</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="./projetos.html">Projetos e Obras</a></li>
-            </ul>
+            <li><a href="#laudos">Riscos</a></li>
+            <li><a href="#etapas">Processo</a></li>
+            <li><a href="./regularizacao.html">Regularização</a></li>
+            <li><a href="./projetos.html">Projetos & Obras</a></li>
+            <li><a href="./SobreNos.html">Sobre nós</a></li>
+            </ul>   
             <a href="#contato" class="btn-nav">Solicitar Avaliação</a>
         </nav>
     </header>
 
     <main>
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 style="color: var(--branco);">Regularizamos seu <span style="color: var(--azul);" >imóvel com </span></h1>
+            <p> Análise detalhada do imóvel, obra ou reforma para prevenir dores de cabeça e prejuízos futuros.
+                Engenheiro responsável com ART e laudos 100% dentro das Normas Brasileiras.</p>
+
+            <div class="hero-cta">
+                <a href="#contato" class="btn-primary">Solicitar Laudo Técnico</a>
+                <a href="#realizadas" class="btn-secondary">Conheça os Serviços</a>
+            </div>
+        </div>
+    </section>
     <!-- ── SEÇÃO INTRODUÇÃO ───────────────────── -->
     <section id="laudos" class="servicos">
         <div class="container">
-            <h2>
-                Regularizamos seu<br><span style="color: var(--azul-claro);">imóvel com segurança</span>
-            </h2>
+              <h4 style="font-size: 30px;">Evite problemas na venda e multas da Receita Federal com a documentação em dia</h4>
+
                 <div class="sobre-grid">
                     <div class="titulos">
-                        <h4>Evite problemas na venda e multas da Receita Federal com a documentação em dia</h4>
                         <p class="subtitulo">Por que regularizar meu imóvel?</p>
                         <p>
                             Para ter a Matrícula de Registro de Imóvel de acordo com a realidade.
@@ -52,9 +62,6 @@
                             Um imóvel regularizado tem mais valor de mercado, facilita o acesso a financiamentos
                             e pode ser transmitido a herdeiros sem complicações burocráticas.
                         </p>
-                        <a href="#etapas" class="btn-primary">
-                            <i class="fa-solid fa-arrow-down"></i> Ver as etapas
-                        </a>
                     </div>
                 </div>
             
@@ -115,48 +122,25 @@
 
             <div class="diferenciais-grid">
                 <div class="dif-item">
-                    <img src="img1.jpg" alt="Contato inicial" class="dig-img">
+                    <img src="./img/img8.png" alt="Contato inicial" class="dig-img">
                     <h4>Comprovação da propriedade do imóvel</h4>
                 </div>
                 <div class="dif-item">
-                    <img src="img2.jpg" alt="Coleta de dados" class="dig-img">
+                    <img src="./img/img2.jpg" alt="Coleta de dados" class="dig-img">
                     <h4>Emissão de Alvará de Construção e Habite-se junto à Prefeitura</h4>
                 </div>
                 <div class="dif-item">
-                    <img src="img3.jpg" alt="Análise técnica" class="dig-img">
+                    <img src="./img/img3.jpg" alt="Análise técnica" class="dig-img">
                     <h4>Regularização do INSS da obra perante a Receita Federal</h4>
                 </div>
                 <div class="dif-item">
-                    <img src="img1.jpg" alt="Entrega do laudo" class="dig-img">
+                    <img src="./img/img9.png" alt="Entrega do laudo" class="dig-img">
                     <h4>Averbação da construção no Cartório de Registro de Imóveis</h4>
                 </div>
             </div>
 
             <!-- Serviços realizados -->
-            <div id="servicos" class="servicos-realizados-titulo">
-                <h4>Serviços que já realizamos</h4>
-            </div>
-
-            <div class="diferenciais-grid">
-                <div class="dif-item">
-                    <img src="img1.jpg" alt="Irregularidade">
-                    <h4>Irregularidade de Imóvel</h4>
-                </div>
-                <div class="dif-item">
-                    <img src="img2.jpg" alt="Trincas">
-                    <h4>Trincas e Rachaduras</h4>
-                </div>
-                <div class="dif-item">
-                    <img src="img3.jpg" alt="Vazamentos">
-                    <h4>Vazamentos</h4>
-                </div>
-                <div class="dif-item">
-                    <img src="img1.jpg" alt="Informalidade">
-                    <h4>Informalidade</h4>
-                </div>
-            </div>
-
-        </main>
+                    </main>
             <!-- Bloco de contato -->
         <section id="contato" class="contato">
             <div class="container">
@@ -208,19 +192,19 @@
             </div>
             <div class="footer-links">
                 <h4>Empresa</h4>
-                <a href="about.html">Sobre Nós</a><br>
+                <a target="_blank" href="SobreNos.html">Sobre Nós</a><br>
                 <a href="index.html#contato">Contato</a><br>
             </div>
             <div class="footer-social">
                 <h4>Redes Sociais</h4>
                 <div class="social-icons">
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/paulojoseferrari?utm_source=qr&igsh=MWxuZTQyYXVsOWtmeQ%3D%3D"><i class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href="#"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Ferrari & Bulcão Engenharia. Todos os direitos reservados. CREA-SP XXXXXX</p>
+            <p>&copy; 2026 Ferrari & Bulcão Engenharia. Todos os direitos reservados. CREA-SP 5071383716</p>
         </div>
     </footer>
 

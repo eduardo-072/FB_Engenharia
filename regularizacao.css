@@ -74,6 +74,28 @@ p { margin-bottom: 16px; color: var(--cinza-escuro); }
     color: var(--cinza-escuro)
 }
 
+
+.logoEmpresa {
+  display: inline-block;
+  height: 80px;
+}
+
+.hero {
+    height: 80vh !important;
+    background-image: url("./img/img4.png") !important;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    align-items: center;
+}
+.hero-overlay { position: absolute; inset: 0; background: var(--gradienteAzul); }
+.hero-content { position: relative; color: var(--branco); max-width: 700px; }
+.hero-content h1 span { color: var(--azul); }
+.hero-content p { font-size: 1.2rem; color: rgba(255,255,255,0.9); margin-bottom: 24px; }
+.hero-cta { display: flex; gap: 16px; }
+
+
 /* ── BOTÕES ────────────────────────────────────── */
 .btn-primary, .btn-secondary, .btn-nav, .btn-whatsapp {
     padding: 14px 30px;
@@ -576,8 +598,8 @@ footer { background: #0D1117; color: rgba(255,255,255,0.7); padding: 60px 0 0; }
 .footer-links h4, .footer-social h4 { color: var(--azul); margin-bottom: 16px; font-size: 1.1rem; }
 .footer-links a { display: inline-block; color: var(--branco); text-decoration: none; margin-bottom: 10px; transition: color 0.3s; }
 .footer-links a:hover { color: var(--azul-claro); }
-.social-icons { display: flex; gap: 16px; }
-.social-icons a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--branco); transition: all 0.3s; }
+.social-icons { display: flex; gap: 16px;  }
+.social-icons a { text-decoration: none; width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--branco); transition: all 0.3s; }
 .social-icons a:hover { background: var(--laranja); }
 .footer-bottom { border-top: 1px solid var(--cinza-medio); padding: 20px 0; text-align: center; font-size: 0.9rem; }
 .footer-bottom p{ color: var(--branco); text-align: center;}
@@ -822,6 +844,9 @@ img {
     display: flex; 
     align-items: center; 
 }
+
+.hero-cta { display: flex; gap: 16px; }
+
 
 /* Tablet pra baixo - até 992px */
 @media (max-width: 992px) {
