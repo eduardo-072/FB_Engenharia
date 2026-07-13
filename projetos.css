@@ -864,7 +864,7 @@ img {
 }
 
 
-.hero { height: 80vh; background: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070') center/cover; position: relative; display: flex; align-items: center; }
+.hero { height: 80vh; background: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070') center/cover; position: relative; display: flex; align-items: center; margin-top: 50px;}
 .hero-overlay { position: absolute; inset: 0; background: var(--gradienteAzul); }
 .hero-content { position: relative; color: var(--branco); max-width: 700px; }
 .hero-content h1 span { color: var(--azul); }

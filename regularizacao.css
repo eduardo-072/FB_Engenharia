@@ -81,6 +81,7 @@ p { margin-bottom: 16px; color: var(--cinza-escuro); }
 }
 
 .hero {
+    margin-top: 150px;
     height: 80vh !important;
     background-image: url("./img/img4.png") !important;
     background-size: 100% 100%;
