@@ -294,7 +294,7 @@
                     <div class="contato-item"><i class="fa-solid fa-address-card"></i><span>Crea: 5071383716</span></div>
                     <div class="contato-item"><i class="fa-solid fa-address-card"></i><span>Crea: 5071236197</span></div>
                     <div class="contato-item"><i class="fa-solid fa-location-dot"></i> <span>Atendemos toda a Baixada Santista</span></div>
-                    <a href="https://wa.me/5511982879645" target="_blank" class="btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp</a>
+                    <a href="https://wa.me/5513981104452" target="_blank" class="btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp</a>
                 </div>
                 <form class="form-contato" id="form-contato">
                     <input type="text" id="nome" placeholder="Nome completo" required>
@@ -306,13 +306,29 @@
                         <option>Vistoria Cautelar</option>
                         <option>Vistoria de Entrega</option>
                     </select>
-                    <textarea id="mensagem" placeholder="Descreva brevemente sua necessidade..." rows="4"></textarea>
+
+                    <textarea
+                        id="mensagem"
+                        placeholder="Descreva brevemente sua necessidade..."
+                        rows="4"
+                        maxlength="250">
+                    </textarea>
+
+                        <p class="contador-texto">Caracteres: <span id="contador">0</span>/250</p>
+
+                        <script>
+                          const textarea = document.getElementById("mensagem");
+                          const contador = document.getElementById("contador");
+
+                          textarea.addEventListener("input", () => {
+                              contador.textContent = textarea.value.length;
+                          });
+                        </script>
                     <button type="submit" class="btn-primary">Enviar Solicitação</button>
                 </form>
             </div>
         </div>
     </section>
-    
     <!-- FOOTER -->
     <footer>
         <div class="container footer-grid">

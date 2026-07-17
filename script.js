@@ -41,7 +41,7 @@ if (formContato) {
             texto += `*Serviço:* ${servico}\n`;
             texto += `*Descrição:* ${mensagem}`;
 
-            const seuNumero = '5511982879645';
+            const seuNumero = '5513981104452';
             const link = `https://wa.me/${seuNumero}?text=${encodeURIComponent(texto)}`;
             window.open(link, '_blank');
         this.reset();
