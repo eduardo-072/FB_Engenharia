@@ -562,7 +562,7 @@ footer { background: #0D1117; color: rgba(255,255,255,0.7); padding: 60px 0 0; }
 
 .hero { 
     height: 80vh; 
-    background: url('../imgSobreNos.jpg') center/cover no-repeat;
+    background: url('./imgSobreNos.jpg') center/cover no-repeat;
     position: relative; 
     display: flex; 
     align-items: center; 
@@ -580,7 +580,7 @@ footer { background: #0D1117; color: rgba(255,255,255,0.7); padding: 60px 0 0; }
 @media (max-width: 768px) {
     .hero {
         height: 80vh; /* diminui a altura no celular */
-        background: url('../imgSobreNos.jpg') center/cover no-repeat;
+        background: url('./imgSobreNos.jpg') center/cover no-repeat;
         background-attachment: scroll; /* tira o fixed que buga no mobile */
     }
     

@@ -82,7 +82,7 @@ p { margin-bottom: 16px; color: var(--cinza-escuro); }
 
 .hero {
     height: 80vh !important;
-    background-image: url("../img/img4.png") !important;
+    background-image: url("./img/img4.png") !important;
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;

@@ -887,7 +887,7 @@ img {
 /* Celular - até 768px */
 @media (max-width: 768px) {
     .hero {
-        background: url('../imgSobreNos.jpg') center/cover no-repeat;
+        background: url('./imgSobreNos.jpg') center/cover no-repeat;
         background-attachment: scroll; /* tira o fixed que buga no mobile */
         padding-top: 150px;
     }
