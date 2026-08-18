@@ -297,13 +297,13 @@ footer { background: #0D1117; color: rgba(255,255,255,0.7); padding: 60px 0 0; }
 .footer-brand .logo { color: var(--branco); margin-bottom: 16px; }
 .footer-brand p {color: var(--azul);}
 .footer-links h4, .footer-social h4 { color: var(--azul); margin-bottom: 16px; font-size: 1.1rem; }
-.footer-links a { display: block; color: var(--branco); text-decoration: none; margin-bottom: 10px; transition: color 0.3s; }
+.footer-links a { display: inline-block; color: var(--branco); text-decoration: none; margin-bottom: 10px; transition: color 0.3s; }
 .footer-links a:hover { color: var(--azul-claro); }
 .social-icons { display: flex; gap: 16px; }
 .social-icons a {  text-decoration: none; width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--branco); transition: all 0.3s; }
 .social-icons a:hover { background: var(--laranja); }
 .footer-bottom { border-top: 1px solid var(--cinza-medio); padding: 20px 0; text-align: center; font-size: 0.9rem; }
-.footer-bottom p{ color: var(--branco);}
+.footer-bottom p{ color: var(--branco); text-align: center;}
 
 /* tramento de itens separados*/
 /* ===== ACCORDION FINAL - TRANSPARENTE + BRANCO + ARREDONDADO ===== */
