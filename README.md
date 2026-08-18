@@ -1,4 +1,4 @@
-# FB_Engenharia
+# Ferrari e Bulcao Engenharia
 
 Engenharia de Vistorias e Laudos Técnicos
 
@@ -26,11 +26,13 @@ O objetivo do site é transmitir credibilidade, profissionalismo e facilitar o c
 * Adequação às normas municipais e códigos de obras
 
 # Tecnologias utilizadas
-HTML5
-CSS3
-JavaScript
+HTML5,
+CSS3,
+JavaScript,
 Bootstrap
-Objetivo do projeto
+
+
+**Objetivo do projeto:**
 
 Criar uma presença digital profissional para ampliar a visibilidade do engenheiro, facilitar a captação de clientes e apresentar os serviços técnicos de forma clara, organizada e confiável.
 
